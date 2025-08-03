@@ -1,36 +1,185 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gauthier Compan - Portfolio
 
-## Getting Started
+Portfolio professionnel de Gauthier Compan, AI Software Engineer spécialisé dans le développement d'applications IA, la blockchain et les architectures modernes.
 
-First, run the development server:
+## 🚀 Technologies utilisées
+
+- **Next.js 15** - Framework React moderne
+- **TypeScript** - Typage statique
+- **Tailwind CSS** - Framework CSS utilitaire
+- **React** - Bibliothèque UI
+- **ESLint** - Linting du code
+
+## 📋 Fonctionnalités
+
+- ✅ Design moderne noir et blanc
+- ✅ Responsive design (mobile, tablette, desktop)
+- ✅ Navigation fluide avec ancres
+- ✅ Section expérience avec logos des entreprises
+- ✅ Compétences techniques organisées par catégories
+- ✅ Section contact avec liens sociaux
+- ✅ Optimisé SEO avec métadonnées complètes
+- ✅ Performance optimisée avec Next.js
+
+## 🛠️ Installation et développement
+
+### Prérequis
+
+- Node.js 18+ 
+- npm ou yarn
+
+### Installation
 
 ```bash
+# Cloner le repository
+git clone <votre-repo-url>
+cd nrh
+
+# Installer les dépendances
+npm install
+# ou
+yarn install
+
+# Lancer le serveur de développement
 npm run dev
-# or
+# ou
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Développement
+npm run dev
 
-## Learn More
+# Build de production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Lancer en production
+npm start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Linting
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Structure du projet
 
-## Deploy on Vercel
+```
+nrh/
+├── public/                 # Assets statiques
+│   ├── image0.jpeg        # Photo de profil
+│   ├── logoblaze.jpg      # Logo Blaze Messenger
+│   ├── logopreprocess.jpg # Logo Preprocess
+│   ├── logocostgpt.jpg    # Logo CostGPT
+│   ├── logohoshai.jpg     # Logo HoshAI
+│   ├── logodescribely.jpg # Logo Describely
+│   ├── logocruizefinance.jpg # Logo Cruize Finance
+│   ├── logorejuveai.jpg   # Logo Rejuve.AI
+│   └── logohashflow.jpg   # Logo Hashflow
+├── src/
+│   ├── app/               # App Router Next.js
+│   │   ├── layout.tsx     # Layout principal
+│   │   ├── page.tsx       # Page d'accueil
+│   │   └── globals.css    # Styles globaux
+│   └── components/        # Composants React
+│       ├── Header.tsx     # Navigation
+│       ├── Hero.tsx       # Section principale
+│       ├── Experience.tsx # Expériences professionnelles
+│       ├── Skills.tsx     # Compétences techniques
+│       └── Contact.tsx    # Section contact
+├── package.json
+├── tailwind.config.ts
+└── README.md
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Déploiement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Vercel (Recommandé)
+
+1. Connectez votre repository GitHub à Vercel
+2. Vercel détectera automatiquement Next.js
+3. Le déploiement se fera automatiquement à chaque push
+
+### GitHub Pages
+
+1. Ajoutez le script de build dans `package.json`:
+```json
+{
+  "scripts": {
+    "export": "next build && next export"
+  }
+}
+```
+
+2. Configurez GitHub Actions pour le déploiement automatique
+
+### Netlify
+
+1. Connectez votre repository à Netlify
+2. Configurez les paramètres de build:
+   - Build command: `npm run build`
+   - Publish directory: `out`
+
+## 🎨 Personnalisation
+
+### Modifier les informations personnelles
+
+- **Hero section**: Modifiez `src/components/Hero.tsx`
+- **Expériences**: Modifiez le tableau `experiences` dans `src/components/Experience.tsx`
+- **Compétences**: Modifiez le tableau `skillCategories` dans `src/components/Skills.tsx`
+- **Contact**: Modifiez `src/components/Contact.tsx`
+
+### Modifier les couleurs
+
+Le design utilise Tailwind CSS avec un thème noir et blanc. Pour modifier les couleurs:
+
+1. Modifiez les classes Tailwind dans les composants
+2. Ou personnalisez `tailwind.config.ts`
+
+### Ajouter de nouvelles sections
+
+1. Créez un nouveau composant dans `src/components/`
+2. Importez-le dans `src/app/page.tsx`
+3. Ajoutez-le à la navigation dans `src/components/Header.tsx`
+
+## 📱 Responsive Design
+
+Le site est entièrement responsive avec des breakpoints pour:
+- Mobile: < 768px
+- Tablet: 768px - 1024px  
+- Desktop: > 1024px
+
+## 🔧 Configuration avancée
+
+### Variables d'environnement
+
+Créez un fichier `.env.local` pour les variables d'environnement:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://votre-site.com
+```
+
+### Optimisation des images
+
+Les images sont optimisées avec Next.js Image component. Pour ajouter de nouvelles images:
+
+1. Placez-les dans `public/`
+2. Utilisez le composant `Image` de Next.js
+3. Spécifiez `width` et `height` ou utilisez `fill`
+
+## 📄 Licence
+
+Ce projet est sous licence MIT.
+
+## 👨‍💻 Auteur
+
+**Gauthier Compan** - AI Software Engineer
+- Email: gauthier.compan@example.com
+- Medium: [@blackmirroros](https://medium.com/@blackmirroros)
+- X: [@BlackMirrorOS](https://x.com/BlackMirrorOS)
+
+---
+
+Développé avec ❤️ en Next.js et Tailwind CSS
