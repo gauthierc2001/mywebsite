@@ -5,9 +5,9 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Experience } from "@/components/Experience";
 import { Skills } from "@/components/Skills";
+import { Portfolio } from "@/components/Portfolio";
 import { Contact } from "@/components/Contact";
 import { LoadingOverlay } from "@/components/LoadingOverlay";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,19 +22,19 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-white text-black">
       <LoadingOverlay />
-      <ThemeToggle />
       <div 
         className={`transition-opacity duration-1000 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <Header />
-        <Hero />
-        <Experience />
-        <Skills />
-        <Contact />
+                       <Header />
+               <Hero />
+               <Experience />
+               <Portfolio />
+               <Skills />
+               <Contact />
       </div>
     </div>
   );

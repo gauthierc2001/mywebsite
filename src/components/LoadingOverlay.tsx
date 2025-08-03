@@ -72,12 +72,20 @@ export function LoadingOverlay() {
             </p>
           </div>
 
-          {/* Loading bar */}
-          <div className="w-full h-1 bg-gray-800 rounded-full overflow-hidden mx-auto mb-8">
-            <div 
-              className="h-full bg-gradient-to-r from-gray-600 via-white to-gray-600 transition-all duration-100 ease-out"
-              style={{ width: `${progress}%` }}
-            />
+          {/* Loading circle */}
+          <div className="flex justify-center mb-8">
+            <div className="relative w-16 h-16">
+              {/* Background circle */}
+              <div className="absolute inset-0 w-16 h-16 border-4 border-gray-600 rounded-full"></div>
+              {/* Progress circle */}
+              <div 
+                className="absolute inset-0 w-16 h-16 border-4 border-transparent border-t-white rounded-full transition-all duration-100 ease-out"
+                style={{ 
+                  transform: `rotate(${progress * 3.6}deg)`,
+                  opacity: progress > 0 ? 1 : 0
+                }}
+              ></div>
+            </div>
           </div>
 
           {/* Loading text */}

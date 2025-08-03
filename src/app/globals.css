@@ -25,6 +25,179 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Dark mode styles */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+.dark body {
+  background: #0a0a0a;
+  color: #ededed;
+}
+
+/* Background colors */
+.dark .bg-white {
+  background-color: #0a0a0a;
+}
+
+.dark .bg-gray-50 {
+  background-color: #111111;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1f1f1f;
+}
+
+.dark .bg-gray-200 {
+  background-color: #2d2d2d;
+}
+
+/* Text colors */
+.dark .text-black {
+  color: #ededed;
+}
+
+.dark .text-gray-700 {
+  color: #d1d5db;
+}
+
+.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+.dark .text-gray-500 {
+  color: #6b7280;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af;
+}
+
+.dark .text-gray-300 {
+  color: #d1d5db;
+}
+
+/* Border colors */
+.dark .border-gray-200 {
+  border-color: #2d2d2d;
+}
+
+.dark .border-gray-100 {
+  border-color: #1f1f1f;
+}
+
+/* Gradient backgrounds */
+.dark .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #0a0a0a, #111111, #0a0a0a);
+}
+
+.dark .bg-gradient-to-tr {
+  background: linear-gradient(to top right, #0a0a0a, #111111, #0a0a0a);
+}
+
+.dark .bg-gradient-to-tl {
+  background: linear-gradient(to top left, #0a0a0a, #111111, #0a0a0a);
+}
+
+.dark .bg-gradient-to-bl {
+  background: linear-gradient(to bottom left, #0a0a0a, #111111, #0a0a0a);
+}
+
+.dark .bg-gradient-to-r {
+  background: linear-gradient(to right, #0a0a0a, #111111, #0a0a0a);
+}
+
+.dark .bg-gradient-to-b {
+  background: linear-gradient(to bottom, #0a0a0a, #111111, #0a0a0a);
+}
+
+/* Text gradients */
+.dark .bg-gradient-to-r.from-black.to-gray-700 {
+  background: linear-gradient(to right, #ededed, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Shadows for dark mode */
+.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.8);
+}
+
+.dark .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+}
+
+.dark .shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.8), 0 4px 6px -2px rgba(0, 0, 0, 0.8);
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.8), 0 2px 4px -1px rgba(0, 0, 0, 0.8);
+}
+
+.dark .shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* Hover states for dark mode */
+.dark .hover\:bg-gray-200:hover {
+  background-color: #2d2d2d;
+}
+
+.dark .hover\:text-gray-700:hover {
+  color: #d1d5db;
+}
+
+.dark .hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+}
+
+.dark .hover\:shadow-xl:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.8);
+}
+
+.dark .hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.8), 0 4px 6px -2px rgba(0, 0, 0, 0.8);
+}
+
+/* Bio section dark mode styles */
+.dark .bg-gradient-to-br.from-gray-50.to-white {
+  background: linear-gradient(to bottom right, #111111, #0a0a0a);
+}
+
+.dark .border-gray-200 {
+  border-color: #2d2d2d;
+}
+
+.dark .text-black {
+  color: #ededed;
+}
+
+.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+.dark .hover\:bg-white:hover {
+  background-color: #1f1f1f;
+}
+
+.dark .border-t.border-gray-200 {
+  border-top-color: #2d2d2d;
+}
+
+/* Backdrop blur for dark mode */
+.dark .backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  background-color: rgba(10, 10, 10, 0.95);
+}
+
+/* Matrix rain effect for dark mode */
+.dark .text-green-500\/10 {
+  color: rgba(34, 197, 94, 0.2);
+}
+
 @layer utilities {
   /* Fade in up animation */
   @keyframes fade-in-up {

@@ -25,27 +25,7 @@ export function Hero() {
 
   return (
     <section id="about" className="pt-24 pb-16 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-      {/* Animated background particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-gray-100 to-transparent rounded-full opacity-30 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-gray-100 to-transparent rounded-full opacity-30 animate-pulse delay-1000"></div>
-        
-        {/* Floating code particles - only render on client */}
-        {isClient && [...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-gray-300 text-xs font-mono opacity-20 animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 2}s`,
-              animationDuration: `${8 + i * 2}s`
-            }}
-          >
-            {['<div>', '</>', '{...}', '()', '=>', 'const'][i]}
-          </div>
-        ))}
-      </div>
+
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -61,11 +41,7 @@ export function Hero() {
                   className="object-cover object-top"
                   priority
                 />
-                {/* Subtle scan line effect */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-transparent animate-scan"></div>
               </div>
-              {/* Glowing ring effect */}
-              <div className="absolute inset-0 rounded-full border-2 border-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-ping"></div>
             </div>
           </div>
 
@@ -78,7 +54,6 @@ export function Hero() {
                 </h1>
                 <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6 font-mono">
                   <span className="text-black">{typedText}</span>
-                  <span className="animate-pulse">|</span>
                 </h2>
               </div>
               

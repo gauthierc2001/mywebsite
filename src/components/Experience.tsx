@@ -96,7 +96,7 @@ const experiences: Experience[] = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section id="experience" className="py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-gray-100 to-transparent rounded-full opacity-20 animate-pulse"></div>
@@ -104,8 +104,8 @@ export function Experience() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
             Professional Experience
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -113,20 +113,20 @@ export function Experience() {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {experiences.map((experience, index) => (
             <div
               key={experience.id}
               className="group bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 animate-slide-in-up"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="p-8">
-                <div className="flex flex-col md:flex-row md:items-start gap-8">
+              <div className="p-6">
+                <div className="flex flex-col md:flex-row md:items-start gap-6">
                   {/* Company Logo */}
                   <div className="flex-shrink-0">
                     <div className="relative group/logo">
                       <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl blur-lg opacity-50 group-hover/logo:opacity-75 transition-opacity duration-300"></div>
-                      <div className="relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg bg-white p-2 group-hover/logo:scale-110 transition-transform duration-300">
+                      <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg bg-white p-2 group-hover/logo:scale-110 transition-transform duration-300">
                         <Image
                           src={experience.logo}
                           alt={`${experience.company} logo`}
@@ -141,10 +141,10 @@ export function Experience() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
                       <div>
-                        <h3 className="text-2xl font-bold text-black mb-2 group-hover:text-gray-700 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-black mb-2 group-hover:text-gray-700 transition-colors duration-300">
                           {experience.role}
                         </h3>
-                        <p className="text-xl font-semibold text-gray-700 mb-1">
+                        <p className="text-lg font-semibold text-gray-700 mb-1">
                           {experience.company}
                         </p>
                       </div>
@@ -158,7 +158,7 @@ export function Experience() {
                       </div>
                     </div>
 
-                    <p className="text-gray-600 leading-relaxed mb-8 text-lg whitespace-pre-line">
+                    <p className="text-gray-600 leading-relaxed mb-6 text-base whitespace-pre-line">
                       {experience.description}
                     </p>
 
@@ -167,7 +167,7 @@ export function Experience() {
                       {experience.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="px-4 py-2 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 text-sm font-medium rounded-full border border-gray-200 hover:shadow-md hover:scale-105 transition-all duration-300 transform"
+                          className="px-3 py-1 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700 text-xs font-medium rounded-full border border-gray-200 hover:shadow-md hover:scale-105 transition-all duration-300 transform"
                         >
                           {skill}
                         </span>
