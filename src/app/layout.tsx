@@ -14,20 +14,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Gauthier Compan - AI Software Engineer",
-  description: "AI Software Engineer spécialisé dans le développement d'applications IA, la blockchain et les architectures modernes. Expert en LLMs, NLP, DeFi et développement full-stack.",
+  description: "AI Software Engineer specialized in AI application development, blockchain, and modern architectures. Expert in LLMs, NLP, DeFi, and full-stack development.",
   keywords: ["AI Software Engineer", "LLMs", "NLP", "Blockchain", "DeFi", "React", "Node.js", "Solidity", "Freelance"],
   authors: [{ name: "Gauthier Compan" }],
   creator: "Gauthier Compan",
   openGraph: {
     title: "Gauthier Compan - AI Software Engineer",
-    description: "AI Software Engineer spécialisé dans le développement d'applications IA, la blockchain et les architectures modernes.",
+    description: "AI Software Engineer specialized in AI application development, blockchain, and modern architectures.",
     type: "website",
-    locale: "fr_FR",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Gauthier Compan - AI Software Engineer",
-    description: "AI Software Engineer spécialisé dans le développement d'applications IA, la blockchain et les architectures modernes.",
+    description: "AI Software Engineer specialized in AI application development, blockchain, and modern architectures.",
   },
 };
 
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
