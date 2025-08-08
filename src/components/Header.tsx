@@ -5,10 +5,12 @@ import { useState, useEffect } from 'react';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClient, setIsClient] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     setIsClient(true);
+    // Set dark mode as default
+    document.documentElement.classList.add('dark');
   }, []);
 
   const toggleDarkMode = () => {
@@ -38,12 +40,27 @@ export function Header() {
             )}
           </button>
 
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-black hover:text-gray-700 transition-colors duration-300 cursor-pointer">
-              Gauthier Compan
-            </h1>
-          </div>
+
+
+          {/* Start a Conversation button */}
+          <button
+            onClick={() => {
+              // Scroll to contact section and open modal
+              const contactSection = document.getElementById('contact');
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+                // Open modal after a short delay
+                setTimeout(() => {
+                  // Trigger modal open (we'll need to pass this function from Contact component)
+                  const event = new CustomEvent('openContactModal');
+                  window.dispatchEvent(event);
+                }, 500);
+              }
+            }}
+            className="px-4 py-2 bg-white text-black rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-gray-200 hover:bg-gray-50"
+          >
+            Start a Conversation
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">

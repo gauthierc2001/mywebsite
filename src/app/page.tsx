@@ -6,6 +6,7 @@ import { Hero } from "@/components/Hero";
 import { Experience } from "@/components/Experience";
 import { Skills } from "@/components/Skills";
 import { Portfolio } from "@/components/Portfolio";
+import { Collaborations } from "@/components/Collaborations";
 import { Contact } from "@/components/Contact";
 import { LoadingOverlay } from "@/components/LoadingOverlay";
 
@@ -22,7 +23,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white">
       <LoadingOverlay />
       <div 
         className={`transition-opacity duration-1000 ${

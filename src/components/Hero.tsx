@@ -24,7 +24,10 @@ export function Hero() {
   }, [currentIndex, fullText]);
 
   return (
-    <section id="about" className="pt-24 pb-16 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+    <section id="about" className="pt-20 pb-6 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Section separator */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
 
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -33,7 +36,7 @@ export function Hero() {
           <div className="flex justify-center lg:justify-start">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500"></div>
-              <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-gray-200 shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-105">
+              <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-200 shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-105">
                 <Image
                   src="/image0.jpeg"
                   alt="Gauthier Compan"
@@ -49,46 +52,46 @@ export function Hero() {
           <div className="text-center lg:text-left">
             <div className="space-y-6">
               <div className="animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl font-bold text-black mb-4 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
-                  Gauthier Compan
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 mb-6 font-mono">
-                  <span className="text-black">{typedText}</span>
-                </h2>
+                <div className="flex flex-col lg:flex-row lg:items-baseline lg:gap-4 mb-4">
+                  <h1 className="text-2xl md:text-3xl font-bold text-black bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
+                    Gauthier Compan
+                  </h1>
+                  <h2 className="text-lg md:text-xl font-bold text-black bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
+                    AI Software Engineer
+                  </h2>
+                </div>
               </div>
               
               <div className="animate-fade-in-up delay-200">
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Born in France and expatriated to Portugal, I specialize in developing AI-powered applications, 
-                  blockchain solutions, and modern architectures. With expertise in LLMs, NLP, DeFi, and full-stack development, 
-                  I bring innovative solutions to complex technical challenges.
+                <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                  Born in France and now based in Portugal, I focus on developing applications and tools powered by artificial intelligence. My work ranges from building web platforms using large language models (LLMs) for natural language processing to creating end-to-end systems that solve practical problems. I also take part in AI research projects, experimenting with new model architectures and prompt-engineering techniques to improve real-world results.
                 </p>
               </div>
 
               <div className="animate-fade-in-up delay-300">
                 <div className="space-y-4">
                   <div className="flex items-center justify-center lg:justify-start space-x-4">
-                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                      <span className="text-sm font-medium text-gray-700">
-                        Computer Science Licence
+                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-3 py-1.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                      <span className="text-xs font-medium text-gray-700">
+                        Bachelor's in Computer Science
                       </span>
                     </div>
-                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                      <span className="text-sm font-medium text-gray-700">
-                        University of Montpellier 2021
+                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-3 py-1.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                      <span className="text-xs font-medium text-gray-700">
+                        University of Montpellier, 2021
                       </span>
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-center lg:justify-start space-x-4">
-                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                      <span className="text-sm font-medium text-gray-700">
-                        Bac S - IT Specialization
+                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-3 py-1.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                      <span className="text-xs font-medium text-gray-700">
+                        Scientific Baccalaureate with IT Specialization
                       </span>
                     </div>
-                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
-                      <span className="text-sm font-medium text-gray-700">
-                        Available for new projects
+                    <div className="bg-gradient-to-r from-gray-100 to-gray-200 px-3 py-1.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105">
+                      <span className="text-xs font-medium text-gray-700">
+                        Open to new projects and collaborations
                       </span>
                     </div>
                   </div>
@@ -99,13 +102,13 @@ export function Hero() {
         </div>
 
         {/* Bio Section */}
-        <div className="mt-16 animate-fade-in-up delay-500">
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-100 shadow-xl hover:shadow-2xl transition-all duration-500">
-            <h3 className="text-2xl font-bold text-black mb-8 text-center bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
-              Beyond the Code
+        <div className="mt-8 animate-fade-in-up delay-500">
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-4 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-500">
+            <h3 className="text-lg font-bold text-black mb-3 text-center bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
+              About me
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-6">
                 <div className="group flex items-start space-x-4 p-4 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300">
                   <div className="w-10 h-10 bg-gradient-to-br from-black to-gray-700 rounded-full flex items-center justify-center flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-300">
@@ -117,8 +120,7 @@ export function Hero() {
                   <div>
                     <h4 className="font-semibold text-black mb-2">Southern French Roots</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Growing up in the sun-drenched south of France shaped my appreciation for both precision and creativity. 
-                      The region's rich history of innovation and craftsmanship influenced my approach to problem-solving.
+                      I grew up in the sun-drenched south of France which shaped my appreciation for both precision and creativity. The region's history of innovation and craftsmanship continues to influence my approach to solving problems.
                     </p>
                   </div>
                 </div>
@@ -130,10 +132,9 @@ export function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-black mb-2">Model Making & Detail</h4>
+                    <h4 className="font-semibold text-black mb-2">Model Making and Detail</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Since childhood, I've been passionate about model making and miniature painting. This hobby has instilled 
-                      in me an exceptional attention to detail and perfectionism that translates directly into my technical work.
+                      Since childhood I have been passionate about model making and miniature painting. This hobby has given me a strong attention to detail and a drive for perfection that carries over into my technical work.
                     </p>
                   </div>
                 </div>
@@ -147,10 +148,9 @@ export function Hero() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-black mb-2">Multilingual & Global</h4>
+                    <h4 className="font-semibold text-black mb-2">Multilingual and Global</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Fluent in French and English, conversational in Spanish, and currently learning Portuguese. 
-                      This linguistic diversity reflects my love for travel and connecting with people across cultures.
+                      I speak French and English fluently, have conversational Spanish and I am learning Portuguese. This linguistic diversity reflects my love for travel and connecting with people from different cultures.
                     </p>
                   </div>
                 </div>
@@ -164,8 +164,7 @@ export function Hero() {
                   <div>
                     <h4 className="font-semibold text-black mb-2">Equestrian Spirit</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      As an experienced rider, I understand the balance between control and freedom, patience and action. 
-                      These principles guide my approach to both technical challenges and client relationships.
+                      As an experienced rider I understand the balance between control and freedom, patience and action. These principles guide my work and my relationships with clients.
                     </p>
                   </div>
                 </div>

@@ -64,7 +64,7 @@ export function LoadingOverlay() {
               transform: `translateY(${Math.max(0, 20 - (progress / 5))}px)`
             }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg whitespace-nowrap">
               Gauthier Compan
             </h1>
             <p className="text-xl text-gray-300 font-mono drop-shadow-lg">
